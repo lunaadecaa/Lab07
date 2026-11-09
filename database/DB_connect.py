@@ -32,6 +32,7 @@ class DBConnect:
                     pool_size=dimensione_pool,
                     option_files=f"{pathlib.Path(__file__).resolve().parent}/connector.cnf"
                 )
+
                 return cls._pool_connessioni.get_connection()
 
             except mysql.connector.Error as err:
